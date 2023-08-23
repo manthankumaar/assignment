@@ -33,7 +33,6 @@ const Register = () => {
             <Button
               onClick={() => {
                 signIn('google')
-                router.push('/dashboard')
               }}
               className='bg-white text-[#858585]'
             >
