@@ -15,36 +15,12 @@ import LineChart from '../ui/LineChart'
 
 const Dashboard = () => {
   const [isSideMenuOpen, setIsSideMenuOpen] = useState(false)
-  const [isNotificationsMenuOpen, setIsNotificationsMenuOpen] = useState(false)
-  const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false)
-  const [isPagesMenuOpen, setIsPagesMenuOpen] = useState(false)
 
   const toggleSideMenu = () => {
     setIsSideMenuOpen(!isSideMenuOpen)
   }
-
   const closeSideMenu = () => {
     setIsSideMenuOpen(false)
-  }
-
-  const toggleNotificationsMenu = () => {
-    setIsNotificationsMenuOpen(!isNotificationsMenuOpen)
-  }
-
-  const closeNotificationsMenu = () => {
-    setIsNotificationsMenuOpen(false)
-  }
-
-  const toggleProfileMenu = () => {
-    setIsProfileMenuOpen(!isProfileMenuOpen)
-  }
-
-  const closeProfileMenu = () => {
-    setIsProfileMenuOpen(false)
-  }
-
-  const togglePagesMenu = () => {
-    setIsPagesMenuOpen(!isPagesMenuOpen)
   }
   return (
     <div
@@ -52,9 +28,13 @@ const Dashboard = () => {
         isSideMenuOpen ? 'overflow-hidden' : ''
       }`}
     >
-      <Sidebar />
+      <Sidebar
+        toggleSideMenu={toggleSideMenu}
+        isSideMenuOpen={isSideMenuOpen}
+        closeSideMenu={closeSideMenu}
+      />
       <div className='flex flex-col flex-1 w-full mt-[30px] overflow-y-auto'>
-        <Header toggleSideMenu={toggleSideMenu} />
+        <Header toggleSideMenu={() => toggleSideMenu()} />
         <main>
           <div className='grid mb-4 pb-10 px-8 mx-4 '>
             <div className='grid grid-cols-12 gap-6'>
