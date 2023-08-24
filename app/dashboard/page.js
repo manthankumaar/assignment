@@ -33,7 +33,7 @@ const Dashboard = () => {
         isSideMenuOpen={isSideMenuOpen}
         closeSideMenu={closeSideMenu}
       />
-      <div className='flex flex-col flex-1 w-full mt-[30px] overflow-y-auto'>
+      <div className='flex flex-col flex-1 w-full md:mt-[30px] overflow-y-auto'>
         <Header toggleSideMenu={() => toggleSideMenu()} />
         <main>
           <div className='grid mb-4 pb-10 px-8 mx-4 '>

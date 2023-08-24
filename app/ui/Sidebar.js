@@ -108,62 +108,84 @@ function Sidebar({ isSideMenuOpen, closeSideMenu, toggleSideMenu }) {
           }}
         >
           <div className='text-white'>
-            <div className='flex p-2 bg-black'>
-              <div className='flex py-3 px-2 items-center'>
-                <p className='ml-2 font-semibold italic'>Board.</p>
+            <div
+              className='flex flex-col justify-between gap-4 h-full'
+              onClick={toggleSideMenu}
+            >
+              <div className='flex p-2 bg-black'>
+                <div className='flex py-3 px-2 items-center'>
+                  <p className='ml-2 font-semibold italic'>Board.</p>
+                </div>
               </div>
-            </div>
-            <div>
-              <ul className='mt-6 leading-10'>
-                <li className='relative px-2 py-1'>
-                  <a
-                    className='inline-flex items-center w-full text-sm font-semibold text-white transition-colors duration-150 cursor-pointer hover:text-green-500'
-                    href='#'
-                  >
-                    <span className='ml-4'>Dashboard</span>
-                  </a>
-                </li>
-                <li className='relative px-2 py-1'>
-                  <a
-                    className='inline-flex items-center w-full text-sm font-semibold text-white transition-colors duration-150 cursor-pointer hover:text-green-500'
-                    href='#'
-                  >
-                    <span className='ml-4'>Transaction</span>
-                  </a>
-                </li>
-                <li className='relative px-2 py-1'>
-                  <a
-                    className='inline-flex items-center w-full text-sm font-semibold text-white transition-colors duration-150 cursor-pointer hover:text-green-500'
-                    href='#'
-                  >
-                    <span className='ml-4'>Schedule</span>
-                  </a>
-                </li>
-                <li className='relative px-2 py-1'>
-                  <a
-                    className='inline-flex items-center w-full text-sm font-semibold text-white transition-colors duration-150 cursor-pointer hover:text-green-500'
-                    href='#'
-                  >
-                    <span className='ml-4'>User</span>
-                  </a>
-                </li>
-                <li className='relative px-2 py-1'>
-                  <a
-                    className='inline-flex items-center w-full text-sm font-semibold text-white transition-colors duration-150 cursor-pointer hover:text-green-500'
-                    href='#'
-                  >
-                    <span className='ml-4'>Setting</span>
-                  </a>
-                </li>
-                <li className='relative px-2 py-1'>
-                  <a
-                    className='inline-flex items-center w-full text-sm font-semibold text-white transition-colors duration-150 cursor-pointer hover:text-green-500'
-                    href='#'
-                  >
-                    <span className='ml-4'>DASHBOARD</span>
-                  </a>
-                </li>
-              </ul>
+              <div>
+                <ul className='mt-6 leading-10'>
+                  <li className='relative px-2 py-1'>
+                    <a
+                      className='inline-flex items-center w-full text-sm font-semibold text-white '
+                      href='#'
+                    >
+                      {dashboardIcon}
+                      <span className='ml-4'>Dashboard</span>
+                    </a>
+                  </li>
+                  <li className='relative px-2 py-1'>
+                    <a
+                      className='inline-flex items-center w-full text-sm font-semibold text-white '
+                      href='#'
+                    >
+                      {transactionIcon}
+                      <span className='ml-4'>Transaction</span>
+                    </a>
+                  </li>
+                  <li className='relative px-2 py-1'>
+                    <a
+                      className='inline-flex items-center w-full text-sm font-semibold text-white '
+                      href='#'
+                    >
+                      {ScheduledIcon}
+                      <span className='ml-4'>Schedule</span>
+                    </a>
+                  </li>
+                  <li className='relative px-2 py-1'>
+                    <a
+                      className='inline-flex items-center w-full text-sm font-semibold text-white '
+                      href='#'
+                    >
+                      {userIcon}
+                      <span className='ml-4'>User</span>
+                    </a>
+                  </li>
+                  <li className='relative px-2 py-1'>
+                    <a
+                      className='inline-flex items-center w-full text-sm font-semibold text-white '
+                      href='#'
+                    >
+                      {settingsIcon}
+                      <span className='ml-4'>Setting</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <ul>
+                  <li className='relative px-2 py-1'>
+                    <a
+                      className='inline-flex items-center w-full text-sm font-semibold text-white '
+                      href='#'
+                    >
+                      <span className='ml-4'>SHelp</span>
+                    </a>
+                  </li>
+                  <li className='relative px-2 py-1'>
+                    <a
+                      className='inline-flex items-center w-full text-sm font-semibold text-white '
+                      href='#'
+                    >
+                      <span className='ml-4'>Contact Us</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </aside>
