@@ -28,17 +28,20 @@ const Chart = () => {
     },
     labels: ['Apples', 'Oranges', 'Bananas', 'Berries'],
   }
+  if (typeof window === 'undefined') return null
 
   return (
     <div className='col-span-12 mt-5'>
       <div className='grid gap-2 grid-cols-1 lg:grid-cols-2'>
         <div className='bg-white shadow-sm p-4 rounded-2xl'>
-          <ReactApexChart
-            options={pieChartOptions}
-            series={pieChartOptions.series}
-            type={pieChartOptions.chart.type}
-            height={250}
-          />
+          {typeof window !== 'undefined' && (
+            <ReactApexChart
+              options={pieChartOptions}
+              series={pieChartOptions.series}
+              type={pieChartOptions.chart.type}
+              height={250}
+            />
+          )}
         </div>
         <div className='bg-white shadow-sm p-4 rounded-2xl'>
           <h1 className='font-bold text-base'>Schedule</h1>

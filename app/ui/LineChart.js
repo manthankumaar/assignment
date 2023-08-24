@@ -70,6 +70,7 @@ const LineChart = () => {
       },
     },
   }
+  if (typeof window === 'undefined') return null
   return (
     <div className='col-span-12 mt-5'>
       <div className='grid gap-2 grid-cols-1 lg:grid-cols-1'>
