@@ -1,5 +1,5 @@
-import ReactApexChart from 'react-apexcharts'
-
+import dynamic from 'next/dynamic'
+const ApexChart = dynamic(() => import('react-apexcharts'), { ssr: false })
 const Chart = () => {
   const pieChartOptions = {
     series: [44, 55, 67, 83],
@@ -35,7 +35,7 @@ const Chart = () => {
       <div className='grid gap-2 grid-cols-1 lg:grid-cols-2'>
         <div className='bg-white shadow-sm p-4 rounded-2xl'>
           {typeof window !== 'undefined' && (
-            <ReactApexChart
+            <ApexChart
               options={pieChartOptions}
               series={pieChartOptions.series}
               type={pieChartOptions.chart.type}
