@@ -173,7 +173,7 @@ function Sidebar({ isSideMenuOpen, closeSideMenu, toggleSideMenu }) {
                       className='inline-flex items-center w-full text-sm font-semibold text-white '
                       href='#'
                     >
-                      <span className='ml-4'>SHelp</span>
+                      <span className='ml-4'>Help</span>
                     </a>
                   </li>
                   <li className='relative px-2 py-1'>
