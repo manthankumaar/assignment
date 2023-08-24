@@ -110,7 +110,7 @@ function Sidebar({ isSideMenuOpen, closeSideMenu, toggleSideMenu }) {
           <div className='text-white'>
             <div
               className='flex flex-col justify-between gap-4 h-full'
-              onClick={toggleSideMenu}
+              onClick={closeSideMenu}
             >
               <div className='flex p-2 bg-black'>
                 <div className='flex py-3 px-2 items-center'>
